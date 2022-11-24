@@ -10,6 +10,6 @@ typedef struct Vector3Double{
     };
     double vec[3];
   };
-} Vec3fd;
+} Vec3d;
 
 #endif

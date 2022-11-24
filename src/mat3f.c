@@ -46,3 +46,29 @@ Vec3f Mat3f_MultiplyVec3f(const Mat3f* mat,
 
   return return_vec;
 }
+
+Vec3f Mat3f_GetCol(const Mat3f *mat,
+                   int col) {
+  assert(mat != NULL);
+  assert(col < 3);
+  assert(col >= 0);
+
+  return (Vec3f) {
+    .x = mat->mat[0 * 3 + col],
+    .y = mat->mat[1 * 3 + col],
+    .z = mat->mat[2 * 3 + col]
+  };
+}
+
+Vec3f Mat3f_GetRow(const Mat3f *mat,
+                   int row) {
+  assert(mat != NULL);
+  assert(row < 3);
+  assert(row >= 0);
+
+  return (Vec3f) {
+      .x = mat->mat[row * 3 + 0],
+      .y = mat->mat[row * 3 + 1],
+      .z = mat->mat[row * 3 + 2]
+  };
+}

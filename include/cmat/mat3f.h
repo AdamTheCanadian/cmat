@@ -30,4 +30,15 @@ static inline void Mat3f_Set(Mat3f* mat,
   mat->mat[i * 3 + j] = value;
 }
 
+/**
+ * \return The column vector (col) from a matrix (mat)
+ */
+Vec3f Mat3f_GetCol(const Mat3f *mat,
+                   int col);
+
+/**
+ * \return The row vector (row) from a matrix (mat)
+ */
+Vec3f Mat3f_GetRow(const Mat3f *mat,
+                   int row);
 #endif

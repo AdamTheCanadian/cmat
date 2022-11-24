@@ -12,4 +12,6 @@ typedef struct Vector3Double{
   };
 } Vec3d;
 
+void Vec3d_SetZero(Vec3d *vec);
+
 #endif

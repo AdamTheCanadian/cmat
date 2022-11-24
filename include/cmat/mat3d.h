@@ -5,4 +5,6 @@ typedef struct Matrix3x3Double {
   double mat[9];
 } Mat3d;
 
+void Mat3d_SetZero(Mat3d *mat);
+
 #endif

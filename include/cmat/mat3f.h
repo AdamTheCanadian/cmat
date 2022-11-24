@@ -41,4 +41,18 @@ Vec3f Mat3f_GetCol(const Mat3f *mat,
  */
 Vec3f Mat3f_GetRow(const Mat3f *mat,
                    int row);
+
+/**
+ * Set the (row) of matrix (mat) from the vector (rowVec)
+ */
+void Mat3f_SetRow(Mat3f *mat,
+                  const Vec3f *rowVec,
+                  int row);
+
+/**
+ * Set the (col) of matrix (mat) from the vector (colVec)
+ */
+void Mat3f_SetCol(Mat3f *mat,
+                  const Vec3f *colVec,
+                  int col);
 #endif

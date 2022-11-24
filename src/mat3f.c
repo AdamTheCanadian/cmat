@@ -72,3 +72,29 @@ Vec3f Mat3f_GetRow(const Mat3f *mat,
       .z = mat->mat[row * 3 + 2]
   };
 }
+
+void Mat3f_SetRow(Mat3f *mat,
+                  const Vec3f *rowVec,
+                  int row) {
+  assert(mat != NULL);
+  assert(rowVec != NULL);
+  assert(row < 3);
+  assert(row >= 0);
+
+  mat->mat[row * 3 + 0] = rowVec->x;
+  mat->mat[row * 3 + 1] = rowVec->y;
+  mat->mat[row * 3 + 2] = rowVec->z;
+}
+
+void Mat3f_SetCol(Mat3f *mat,
+                  const Vec3f *colVec,
+                  int col) {
+  assert(mat != NULL);
+  assert(colVec != NULL);
+  assert(col < 3);
+  assert(col >= 0);
+
+  mat->mat[0 * 3 + col] = colVec->x;
+  mat->mat[1 * 3 + col] = colVec->y;
+  mat->mat[2 * 3 + col] = colVec->z;
+}

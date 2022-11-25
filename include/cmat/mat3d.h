@@ -35,4 +35,10 @@ void Mat3d_SetRow(Mat3d *mat,
 void Mat3d_SetCol(Mat3d *mat,
                   const Vec3d *colVec,
                   int col);
+
+/**
+ * Compute mat * scale, modifies mat in place
+ */
+void Mat3d_Scale(Mat3d *mat,
+                 double scale);
 #endif

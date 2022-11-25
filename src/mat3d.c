@@ -62,3 +62,11 @@ void Mat3d_SetCol(Mat3d *mat,
   mat->mat[1 * 3 + col] = colVec->y;
   mat->mat[2 * 3 + col] = colVec->z;
 }
+
+void Mat3d_Scale(Mat3d *mat,
+                 double scale) {
+  assert(mat != NULL);
+  for (int i = 0; i < MAT3D_SIZE; i++) {
+    mat->mat[i] *= scale;
+  }
+}

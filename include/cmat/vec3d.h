@@ -14,4 +14,10 @@ typedef struct Vector3Double{
 
 void Vec3d_SetZero(Vec3d *vec);
 
+/**
+ * Compute vec * scale, modifies vec in place
+ */
+void Vec3d_Scale(Vec3d *vec,
+                 double scale);
+
 #endif

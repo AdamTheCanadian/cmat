@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.0)
 project(cmat)
 
-add_subdirectory(ctest)
+if (NOT ctest)
+    add_subdirectory(ctest)
+endif(ctest)
 
 include_directories(include)
 
@@ -11,7 +13,8 @@ add_library(${PROJECT_NAME}
         src/vec3f.c
         src/vec3d.c
         src/mat3d.c
-        src/vec.c)
+        src/vec.c
+        src/rotations.c)
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 
 add_executable(${PROJECT_NAME}_unit_tests

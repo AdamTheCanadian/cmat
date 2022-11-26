@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0)
 project(cmat)
 
-if (NOT ctest)
+if (NOT TARGET ctest)
     add_subdirectory(ctest)
 endif()
 

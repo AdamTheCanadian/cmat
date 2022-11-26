@@ -3,7 +3,7 @@ project(cmat)
 
 if (NOT ctest)
     add_subdirectory(ctest)
-endif(ctest)
+endif()
 
 include_directories(include)
 

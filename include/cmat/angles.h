@@ -3,6 +3,17 @@
 
 #include "cmat/mat3d.h"
 
+static const double DEGREE_TO_RADIAN = 0.0174532925199433;
+static const double RADIAN_TO_DEGREE = 57.2957795130823;
+
+static inline double DegToRad(double deg) {
+  return deg * DEGREE_TO_RADIAN;
+}
+
+static inline double RadToDeg(double rad) {
+  return rad * RADIAN_TO_DEGREE;
+}
+
 typedef struct {
   union {
     struct {

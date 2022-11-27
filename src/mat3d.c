@@ -70,3 +70,19 @@ void Mat3d_Scale(Mat3d *mat,
     mat->mat[i] *= scale;
   }
 }
+
+Mat3d Mat3d_MultiplyMat3d(const Mat3d *mat1,
+                          const Mat3d *mat2) {
+  assert(mat1 != NULL);
+  assert(mat2 != NULL);
+  Mat3d return_mat;
+  Mat3d_SetZero(&return_mat);
+  for (int i = 0; i < 3; i++) {
+    for (int k = 0; k < 3; k++) {
+      for (int j = 0; j < 3; j++) {
+        return_mat.mat[i * 3 + j] += mat1->mat[i * 3 + k] * mat2->mat[k * 3 + j];
+      }
+    }
+  }
+  return return_mat;
+}

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 project(cmat)
 
 if (NOT TARGET ctest)
-    add_subdirectory(ctest)
+    add_subdirectory(../ctest ${PROJECT_BINARY_DIR}/ctest)
 endif()
 
 include_directories(include)

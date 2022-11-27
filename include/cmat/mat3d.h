@@ -41,4 +41,10 @@ void Mat3d_SetCol(Mat3d *mat,
  */
 void Mat3d_Scale(Mat3d *mat,
                  double scale);
+
+/**
+ * \return mat1 * mat2
+ */
+Mat3d Mat3d_MultiplyMat3d(const Mat3d *mat1,
+                          const Mat3d *mat2);
 #endif

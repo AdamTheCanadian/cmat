@@ -14,7 +14,7 @@ add_library(${PROJECT_NAME}
         src/vec3d.c
         src/mat3d.c
         src/vec.c
-        src/rotations.c)
+        src/angles.c)
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 
 add_executable(${PROJECT_NAME}_unit_tests
